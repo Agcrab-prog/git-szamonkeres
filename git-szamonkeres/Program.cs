@@ -1,16 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace git_szamonkeres
+class Program
 {
-    internal class Program
+    static void Main()
     {
-        static void Main(string[] args)
+        List<int> szamok = new List<int>();
+
+        Console.WriteLine("Adj meg számokat, 0 végjelig:");
+        int szam;
+        do
         {
-            //üres konzolos felület
-        }
+            string input = Console.ReadLine();
+
+            if (int.TryParse(input, out szam))
+            {
+                szamok.Add(szam);
+
+                Console.WriteLine($"Beirt szamok: {string.Join(", ", szamok)}");
+            }
+            else
+            {
+                Console.WriteLine("Ervenytelen szam, probald ujra!");
+            }
+        } while (szam != 0);
+
     }
 }
