@@ -25,5 +25,15 @@ class Program
             }
         } while (szam != 0);
 
+        // 4. Feladat: Minimum kiválasztás és kiírás
+        int minSzam = szamok.Count > 0 ? szamok[0] : 0;
+        foreach (var elem in szamok)
+        {
+            if (elem < minSzam)
+            {
+                minSzam = elem;
+            }
+        }
+        Console.WriteLine($"A legkisebb szam: {minSzam}");
     }
 }
