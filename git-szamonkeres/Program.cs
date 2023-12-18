@@ -10,7 +10,7 @@ namespace git_szamonkeres
     {
         static void Main(string[] args)
         {
-
+            //üres konzolos felület
         }
     }
 }
